@@ -1,17 +1,17 @@
 #!/usr/bin/env ruby
 
-# gem install net-s
 require "net/ssh"
 
-class SSH
-  def initialize
-    SSH_HOST = ENV["SSH_HOST"]
-    SSH_USER = ENV["SSH_USER"]
-    SSH_PASSWORD = ENV["SSH_PASSWORD"]
+class Ssh
+  def initialize host, user, password
+    @host = host
+    @user = user
+    @password = password
   end
 
   def exec command
-    Net::SSH.start(SSH_HOST, SSH_USER, password: SSH_PASSWORD) do |ssh|
+    Net::SSH.start(@host, @user, password: @password) do |ssh|
       ssh.exec!(command)
     end
+  end
 end
