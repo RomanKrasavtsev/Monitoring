@@ -3,6 +3,8 @@
 require "net/ssh"
 
 class Ssh
+  attr_reader :host
+  
   def initialize host, user, password
     @host = host
     @user = user
