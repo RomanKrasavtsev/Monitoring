@@ -1,15 +1,17 @@
 #!/usr/bin/env ruby
 
 # gem install keen
+require "keen"
 
 class KeenIO
-  def initialize
-    Keen.project_id = ENV["KEEN_PROJECT_ID"]
-    Keen.write_key = ENV["KEEN_WRITE_KEY"]
+  def initialize project, project_id, write_key, read_key
+    @project_name = project
+    Keen.project_id = project_id
+    Keen.write_key = write_key
+    Keen.read_key = read_key
   end
 
-  def publush data
-    # server, type, value, date
-    Keen.publish(data)
+  def publish data
+    Keen.publish(@project_name, data)
   end
 end
