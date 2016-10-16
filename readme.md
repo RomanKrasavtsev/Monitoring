@@ -6,7 +6,7 @@
 System: CPU, Memory, VM, IO, DF <br>
 MySQL: Threads_connected <br>
 
-#Переменные окружения: <br>
+# Environment variables
 ## keen.io
 ENV["KEEN_PROJECT_ID"] <br>
 ENV["KEEN_WRITE_KEY"] <br>
