@@ -7,16 +7,19 @@ System: CPU, Mem, VM, IO, DF
 MySQL: Threads_connected
 
 Переменные окружения:
-
 # keen.io
 ENV["KEEN_PROJECT_ID"]
 ENV["KEEN_WRITE_KEY"]
+ENV["KEEN_READ_KEY"]
 
 # mysql
-ENV["MYSQL_USERNAME"]
+ENV["MYSQL_USER"]
 ENV["MYSQL_PASSWORD"]
 
 # ssh
 ENV["SSH_HOST"]
 ENV["SSH_USER"]
 ENV["SSH_PASSWORD"]
+
+# Dependences
+gem install net-s
