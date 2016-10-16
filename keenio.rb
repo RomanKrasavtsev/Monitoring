@@ -1,11 +1,15 @@
 #!/usr/bin/env ruby
 
-#gem install keen
+# gem install keen
 
-KEEN_PROJECT_ID = ENV["KEEN_PROJECT_ID"]
-KEEN_WRITE_KEY = ENV["KEEN_WRITE_KEY"]
+class KeenIO
+  def initialize
+    Keen.project_id = ENV["KEEN_PROJECT_ID"]
+    Keen.write_key = ENV["KEEN_WRITE_KEY"]
+  end
 
-Keen.publish(:signups, {
-  :username => "lloyd",
-  :referred_by => "harry"
-})
+  def publush data
+    # server, type, value, date
+    Keen.publish(data)
+  end
+end
