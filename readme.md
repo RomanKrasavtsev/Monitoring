@@ -8,6 +8,7 @@ MySQL: Threads_connected <br>
 
 # Environment variables
 ## keen.io
+ENV["KEEN_PROJECT_NAME"] <br>
 ENV["KEEN_PROJECT_ID"] <br>
 ENV["KEEN_WRITE_KEY"] <br>
 ENV["KEEN_READ_KEY"] <br>
