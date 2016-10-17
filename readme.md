@@ -23,4 +23,5 @@ ENV["SSH_USER"] <br>
 ENV["SSH_PASSWORD"] <br>
 
 # Dependences
-gem install net-s <br>
+gem install net-ssh <br>
+gem install sinatra <br>
