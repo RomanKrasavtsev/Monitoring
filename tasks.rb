@@ -24,14 +24,17 @@ keenio = KeenIO.new(
 )
 
 # MySQL
-get_threads_connected = ssh.exec(mysql.get_threads_connected)
+threads_connected = ssh.exec(mysql.get_threads_connected).gsub!(/Threads_connected	/, "").gsub!(/\n/, "")
 
-keenio.publish({
+result = keenio.publish({
   host: mysql.host,
   service: "mysql",
-  value: get_threads_connected,
+  parameter: "threads_connected",
+  value: threads_connected,
   date: Time.now
 })
+
+%x(say 'Ошибка') unless result["created"]
 
 # # System
 # df = ssh.exec("df -h")
