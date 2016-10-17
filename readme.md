@@ -1,6 +1,6 @@
 Отправлять данные на https://keen.io/ <br>
 Получать данные через http://www.sinatrarb.com/ <br>
-Для графиков использовать D3.js <br>
+Для графиков использовать https://d3js.org/ <br>
 Задеплоить на https://heroku.com/ <br>
 <br>
 System: CPU, Memory, VM, IO, DF <br>
