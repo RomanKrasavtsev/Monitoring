@@ -1,6 +1,5 @@
 #!/usr/bin/env ruby
 
-# gem install keen
 require "keen"
 
 class KeenIO
