@@ -7,21 +7,25 @@ System: CPU, Memory, VM, IO, DF <br>
 MySQL: Threads_connected <br>
 
 # Environment variables
-## keen.io
-ENV["KEEN_PROJECT_NAME"] <br>
-ENV["KEEN_PROJECT_ID"] <br>
-ENV["KEEN_WRITE_KEY"] <br>
-ENV["KEEN_READ_KEY"] <br>
 
 ## mysql
-ENV["MYSQL_USER"] <br>
-ENV["MYSQL_PASSWORD"] <br>
+export MYSQL_HOST=""
+export MYSQL_USER=""
+export MYSQL_PASSWORD=""
+export MYSQL_DATABASE=""
+
+## keen.io
+export KEEN_PROJECT_NAME=""
+export KEEN_PROJECT_ID=""
+export KEEN_WRITE_KEY=""
+export KEEN_READ_KEY=""
 
 ## ssh
-ENV["SSH_HOST"] <br>
-ENV["SSH_USER"] <br>
-ENV["SSH_PASSWORD"] <br>
+export SSH_HOST=""
+export SSH_USER=""
+export SSH_PASSWORD=""
 
 # Dependences
+gem install keen
 gem install net-ssh <br>
 gem install sinatra <br>
