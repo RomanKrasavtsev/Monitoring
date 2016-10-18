@@ -6,11 +6,6 @@
 System: CPU, Memory, VM, IO, DF <br>
 MySQL: Threads_connected <br>
 
-# Dependences
-gem install keen <br>
-gem install net-ssh <br>
-gem install sinatra <br>
-
 # Delete all data from KeenIO
 curl "https://api.keen.io/3.0/projects/PROJECT_ID/events/PROJECT_NAME" \
   -H "Authorization: MASTER_KEY" \
