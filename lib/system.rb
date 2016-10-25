@@ -1,23 +1,23 @@
 #!/usr/bin/env ruby
 
 class System
-  def self.get_cpu_usage
+  def get_cpu_usage
     "top -b -n1 | grep \"Cpu(s)\" | awk '{print $2 + $3}'"
   end
 
-  def self.free_space
-    # df -h
+  def free_space filesystem
+    "df -h #{filesystem} | tail -n1 | cut -d' ' -f7"
   end
 
-  def self.get_memory_usage
+  def get_memory_usage
     # mem
   end
 
-  def self.get_vm_usage
+  def get_vm_usage
     # vm
   end
 
-  def self.get_io_stat
+  def get_io_stat
     # io
   end
 end
