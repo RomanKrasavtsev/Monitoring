@@ -3,6 +3,6 @@
 set :job_template, "/bin/zsh -l -c ':job'"
 set :output, "#{Dir.pwd}/monitoring.log"
 
-every 5.minutes do
+every 1.minutes do
  command "#{Dir.pwd}/monitoring.rb"
 end
