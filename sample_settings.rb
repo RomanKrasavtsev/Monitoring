@@ -15,7 +15,7 @@ MYSQL = [
   }
 ]
 
-SERVERS = [
+SYSTEM = [
   {
     name: "",
     ip: "",
@@ -30,7 +30,7 @@ SERVERS = [
   }
 ]
 
-SSH = {
+PROXY = {
   ip: "",
   user: "",
   password: ""
