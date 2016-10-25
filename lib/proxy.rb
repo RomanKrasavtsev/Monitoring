@@ -2,7 +2,7 @@
 
 require "net/ssh"
 
-class Ssh
+class Proxy
   attr_reader :ip
 
   def initialize ip, user, password
