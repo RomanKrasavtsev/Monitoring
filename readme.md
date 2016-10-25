@@ -15,11 +15,6 @@
 - Threads_connected
 - Database size
 
-# Requests for a month
-- 1 request * 2 servers / every 1 minute * 60 minutes * 24 hours * 30 days = 86400
-- 2 requests * 2 servers / every 2 minutes * 60 minutes * 24 hours * 30 days = 43200
-- 3 requests * 2 servers / every 5 minutes * 60 minutes * 24 hours * 30 days = 
-
 # Delete all data from KeenIO
 curl "https://api.keen.io/3.0/projects/PROJECT_ID/events/PROJECT_NAME" \
   -H "Authorization: MASTER_KEY" \
