@@ -13,6 +13,7 @@
 
 ## MySQL
 - Threads_connected
+- Database size
 
 # Requests for a month
 1 request * 2 servers / every 1 minute * 60 minutes * 24 hours * 30 days = 86400
