@@ -3,6 +3,23 @@ MYSQL = [
     name: "",
     ip: "",
     user: "",
+    password: "",
+    db: [""]
+  },
+  {
+    name: "",
+    ip: "",
+    user: "",
+    password: "",
+    db: [""]
+  }
+]
+
+SERVERS = [
+  {
+    name: "",
+    ip: "",
+    user: "",
     password: ""
   },
   {
