@@ -6,14 +6,14 @@
 
 # Requests
 ## System
-- CPU
-- Memory
-- VM
-- DF
+- CPU: every 1 minute
+- Memory: every 1 minute
+- VM: every 1 minute
+- DF: every 10 minutes
 
 ## MySQL
-- Threads_connected
-- Database size
+- Threads_connected: every 1 minute
+- Database size: every 10 minutes
 
 # Delete all data from KeenIO
 curl "https://api.keen.io/3.0/projects/PROJECT_ID/events/PROJECT_NAME" \
