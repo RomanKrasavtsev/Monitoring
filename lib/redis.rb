@@ -35,3 +35,4 @@ class Redis
   def get_rejected_connections
   end
  end
+
