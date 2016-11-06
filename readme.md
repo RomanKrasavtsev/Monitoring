@@ -1,24 +1,21 @@
-# Description
-- Send data to https://keen.io/
-- Get data and show dashboard http://www.sinatrarb.com/
-- Charts https://d3js.org/
-- Deploy to https://heroku.com/
+# Flat File Monitoring
+It often happens when we should measure some metrics for a short period of time but we do not have to install any monitoring system for various reasons.
 
-# Requests
+Here we are! And Flat File Monitoring rescues you.
+
+# Metrics
 ## System
-- CPU: every 1 minute
-- Memory: every 1 minute
-- VM: every 1 minute
-- DF: every 10 minutes
+- CPU
+- Memory
+- VM
+- DF
+
+## Network
+- Port open
 
 ## MySQL
-- Threads_connected: every 1 minute
-- Database size: every 10 minutes
-
-# Delete all data from KeenIO
-curl "https://api.keen.io/3.0/projects/PROJECT_ID/events/PROJECT_NAME" \
-  -H "Authorization: MASTER_KEY" \
-  -X DELETE
+- Threads_connected
+- Database size
 
 # Todo
 - Exit and write error message to the log if any of parameters does not exist
