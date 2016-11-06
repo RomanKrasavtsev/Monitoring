@@ -11,10 +11,10 @@ Here we are! And Flat File Monitoring rescues you.
 - DF
 
 ## Network
-- Port open
+- Port is opened
 
 ## MySQL
-- Threads_connected
+- Threads connected
 - Database size
 
 # Todo
