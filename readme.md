@@ -18,4 +18,4 @@ Here we are! And Flat File Monitoring rescues you.
 - Database size
 
 # Todo
-- Exit and write error message to the log if any of parameters does not exist
+- Exit and write error message to the log if any of parameters do not exist
