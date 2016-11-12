@@ -1,5 +1,3 @@
-#!/usr/bin/env ruby
-
 class System
   def get_cpu_usage
     "top -b -n1 | grep \"Cpu(s)\" | awk '{print $2 + $3}'"
@@ -22,3 +20,4 @@ class System
     # io
   end
 end
+
