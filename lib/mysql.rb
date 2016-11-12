@@ -1,5 +1,3 @@
-#!/usr/bin/env ruby
-
 class Mysql
   attr_reader :name
 
@@ -22,3 +20,4 @@ class Mysql
     exec "SELECT Round(Sum(data_length + index_length) / 1024 / 1024, 0) as \"size\" FROM information_schema.tables WHERE table_schema = \"#{name}\";"
   end
 end
+
