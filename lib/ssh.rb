@@ -1,5 +1,3 @@
-#!/usr/bin/env ruby
-
 require "net/ssh"
 
 class SSH
