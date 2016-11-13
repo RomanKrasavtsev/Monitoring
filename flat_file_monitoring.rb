@@ -5,11 +5,12 @@ puts Time.now
 
 require_relative "settings"
 require_relative "lib/mysql"
-require_relative "lib/proxy"
-require_relative "lib/keenio"
+require_relative "lib/network"
+require_relative "lib/redis"
+require_relative "lib/ssh"
 require_relative "lib/system"
 
-class Monitoring
+class FlatFileMonitoring
   def initialize mysql_name, mysql_ip, mysql_user, mysql_password
     @mysql = Mysql.new(
       mysql_name,
@@ -20,17 +21,10 @@ class Monitoring
 
     @system = System.new
 
-    @proxy = Proxy.new(
+    @ssh = SSH.new(
       PROXY[:ip],
       PROXY[:user],
       PROXY[:password]
-    )
-
-    @keenio = KeenIO.new(
-      KEENIO[:project_name],
-      KEENIO[:project_id],
-      KEENIO[:write_key],
-      KEENIO[:read_key]
     )
   end
 
@@ -46,14 +40,14 @@ class Monitoring
     @proxy.exec(@system.get_df filesystem)
   end
 
-  def set_data host, service, parameter, data
-    @keenio.publish({
+  def safe_data host, service, parameter, data
+    {
       host: host,
       service: service,
       parameter: parameter,
       value: data,
       date: Time.now
-    })
+    }
   end
 end
 
