@@ -1,7 +1,7 @@
 # Learn more: http://github.com/javan/whenever
 
 set :job_template, "/bin/zsh -l -c ':job'"
-set :output, "#{Dir.pwd}/monitoring.log"
+set :output, "#{Dir.pwd}/flat_file_monitoring.log"
 
 every 1.minutes do
   command "#{Dir.pwd}/monitoring.rb system_cpu"
